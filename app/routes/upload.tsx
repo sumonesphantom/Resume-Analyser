@@ -59,6 +59,7 @@ const handleAnalyse=async({companyName, jobTitle, jobDescription, file} :{compan
 
     setStatusText('Analysis complete , redirecting....');
     //console.log(data)
+    navigate(`/resume/${uuid}`)
 }
 
     const handleSubmit=(e:FormEvent<HTMLFormElement>)=>{
