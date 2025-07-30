@@ -30,7 +30,7 @@ export default function Home() {
       loadResumes()
     },[])
     useEffect(()=>{
-        if(!auth.isAuthenticated) navigate('/auth?next=/');
+        if(auth.isAuthenticated) navigate('/auth?next=/');
     },[auth.isAuthenticated])
 
   return <main className="bg-[url('/images/bg-main.svg')] bg-cover">
@@ -48,7 +48,7 @@ export default function Home() {
       </div>
       {loadingResumes && (
         <div className="flex flex-col items-center justify-center">
-          <img src='/images/resume-scan-2.gif' className="2-[200px]"/>
+          <img src='/images/resume-scan-2.gif' className="w-[200px]"/>
         </div>
       )}
 
